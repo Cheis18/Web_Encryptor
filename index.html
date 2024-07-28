@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Encriptado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background">
+        <header id="header">
+            <div id="logo">Encriptador</div>
+        </header>
+        <main id="main">
+            <div id="content1">
+                <div id="textContainer">
+                    <input type="text" id="textBox" placeholder="Ingrese el texto aquí...">
+                </div>
+                <div id="excla-note-0">
+                    <div id="excla-note-1">
+                        <div id="exclamation">!</div>
+                    </div>
+                    <div id="excla-note-2">
+                        <p id="note">
+                            Esta pagina fue hecha para "Alura Latam - Oracole"
+                        </p>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <button id="encrypt" onclick="mostrarResultado('encriptado')">Encriptar</button>
+                    <button id="decrypt" onclick="mostrarResultado('desencriptado')">Desencriptar</button>
+                </div>
+            </div>
+            <img id="placeholderImage" src="sin-resultado.png" alt="Image placeholder">
+            <div id="content2" style="display: none;">
+                <div id="outputText"></div>
+                <button id="copy" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </main>
+    </div>
+    <script src="encryptor.js"></script>
+</body>
+</html>
