@@ -1,21 +1,23 @@
 // Función para encriptar el texto
 function encriptarTexto(texto) {
-    return texto
-        .replace(/e/g, "enter")
-        .replace(/i/g, "imes")
-        .replace(/a/g, "ai")
-        .replace(/o/g, "ober")
-        .replace(/u/g, "ufat");
+    const claves = ["e", "i", "a", "o", "u"];
+    const reemplazos = ["enter", "imes", "ai", "ober", "ufat"];
+
+    for (let i = 0; i < claves.length; i++) {
+        texto = texto.replace(new RegExp(claves[i], "g"), reemplazos[i]);
+    }
+    return texto;
 }
 
 // Función para desencriptar el texto
 function desencriptarTexto(texto) {
-    return texto
-        .replace(/enter/g, "e")
-        .replace(/imes/g, "i")
-        .replace(/ai/g, "a")
-        .replace(/ober/g, "o")
-        .replace(/ufat/g, "u");
+    const reemplazos = ["enter", "imes", "ai", "ober", "ufat"];
+    const claves = ["e", "i", "a", "o", "u"];
+
+    for (let i = 0; i < reemplazos.length; i++) {
+        texto = texto.replace(new RegExp(reemplazos[i], "g"), claves[i]);
+    }
+    return texto;
 }
 
 // Función para mostrar el resultado en la página
